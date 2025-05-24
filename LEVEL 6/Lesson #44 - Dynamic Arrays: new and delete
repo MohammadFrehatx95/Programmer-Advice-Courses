@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+
+int main()
+{
+    float* ptr;
+
+    int num = 0;
+
+    cout << "Please Enter Number of Students you want?" << endl;
+    cin >> num;
+
+    ptr = new float[num];
+
+    for (int i = 0; i < num; i++)
+    {
+        cout << "Student " << i + 1 << " ";
+        cin >> *(ptr + i);
+    }
+
+    cout << "display students marks using pointer: " << endl;
+    for (int i = 0; i < num; i++)
+    {
+        cout << "Student " << i + 1 << ": " << *(ptr + i) << endl;
+    }
+
+    delete[] ptr;
+
+
+}
