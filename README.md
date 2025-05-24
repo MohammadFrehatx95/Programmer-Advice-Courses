@@ -1,4 +1,4 @@
-# Programmer-Advice-Courses (i'm Mohammad Frehat and i like to Share My learning journey).
+# Programmer-Advice-Courses (i'm Mohammad Frehat and i would like to Share My learning journey).
 
 
 
