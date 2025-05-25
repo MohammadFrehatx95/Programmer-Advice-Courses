@@ -1,0 +1,17 @@
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+
+int main()
+{
+	vector <int> v1{ 1,2,3,4,5 };
+
+	vector<int>::iterator terator;
+
+	for (terator = v1.begin(); terator != v1.end(); terator++)
+	{
+		cout << *terator << " ";
+	}
+}
