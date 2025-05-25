@@ -1,0 +1,35 @@
+#include <iostream>
+#include <string>
+#include <fstream>
+#include <vector>
+
+using namespace std;
+
+void LoadDatafromVectortoFile(string fileName, vector <string> FileContent)
+{
+
+	fstream MyFile;
+
+	MyFile.open(fileName, ios::out); //read Mode
+
+	string line;
+	if (MyFile.is_open())
+	{
+		for (string & line : FileContent)
+		{
+			if (line != "")
+			{
+				MyFile << line << endl;
+			}
+		}
+		MyFile.close();
+	}
+}
+
+int main()
+{
+	vector <string> vFileContent{ "ali","omar","hashem"};
+
+	LoadDatafromVectortoFile("MyFile.txt", vFileContent);
+
+}
