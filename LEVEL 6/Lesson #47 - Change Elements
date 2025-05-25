@@ -1,0 +1,36 @@
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+
+int main()
+{
+	vector <int> v1{ 1,2,3,4,5 };
+
+	
+	cout << "Initial Vector: ";
+	for (const int& i : v1)
+	{
+		cout << i << " ";
+	}
+
+	cout << endl;
+
+	cout << "Updated Vector: ";
+	for ( int & i : v1)
+	{
+		i = 20;
+		cout << i << " ";
+	}
+
+	v1[1] = 50;
+	v1.at(4) = 60;
+
+	cout << endl;
+	cout << "Updated Vector: ";
+	for (const int& i : v1)
+	{
+		cout << i << " ";
+	}
+}
