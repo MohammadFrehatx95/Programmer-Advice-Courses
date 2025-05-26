@@ -41,4 +41,6 @@ int main()
 	FillRandomMatrix(arr2d,3,3);
 	PrintRandomMatrix(arr2d,3,3);
 
+        system("pause>0");
+
 }
