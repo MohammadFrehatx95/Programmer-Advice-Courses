@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cstdlib>
+#include <iomanip>
 
 using namespace std;
 
@@ -9,25 +10,25 @@ int RandomNumber(int From, int To)
 	return randNum;
 }
 
-void FillRandomMatrix(int arr2d[3][3])
+void FillRandomMatrix(int arr2d[3][3], short rows, short cols)
 {
-	for (int i = 0; i < 3; i++)
+	for (int i = 0; i < rows; i++)
 	{
-		for (int j = 0; j < 3; j++)
+		for (int j = 0; j < cols; j++)
 		{
 			arr2d[i][j] = RandomNumber(1, 100);
 		}
 	}
 }
 
-void PrintRandomMatrix(int arr2d[3][3])
+void PrintRandomMatrix(int arr2d[3][3], short rows, short cols)
 {
 	cout << "The following is a 3x3 random matrix: " << endl;
-	for (int i = 0; i < 3; i++)
+	for (int i = 0; i < rows; i++)
 	{
-		for (int j = 0; j < 3; j++)
+		for (int j = 0; j < cols; j++)
 		{
-			cout << arr2d[i][j] << "\t";
+			cout << setw(3) << arr2d[i][j] << "\t";
 		}
 		cout << endl;
 	}
@@ -37,7 +38,7 @@ int main()
 	srand(static_cast<unsigned int>(time(0)));
 	int arr2d[3][3];
 
-	FillRandomMatrix(arr2d);
-	PrintRandomMatrix(arr2d);
+	FillRandomMatrix(arr2d,3,3);
+	PrintRandomMatrix(arr2d,3,3);
 
 }
