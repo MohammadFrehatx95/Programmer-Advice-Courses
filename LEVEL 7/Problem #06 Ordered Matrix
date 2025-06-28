@@ -5,7 +5,7 @@ using namespace std;
 
 void FillMatrixWithOrderedNumber(int arr[3][3], short rows, short cols)
 {
-    int Counter = 0;
+    short Counter = 0;
     for (short i = 0; i < rows; i++)
     {
         for (short j = 0; j < cols; j++)
