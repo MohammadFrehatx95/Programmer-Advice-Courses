@@ -14,12 +14,7 @@ char ReadCharacter()
 
 char InvertChar(char s1)
 {
-	if (s1 == tolower(s1))
-		s1 = toupper(s1);
-	else
-	    s1 = tolower(s1);
-
-	return s1;
+	return isupper(s1) ? tolower(s1) : toupper(s1);
 }
 
 
